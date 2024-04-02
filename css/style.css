@@ -735,11 +735,22 @@ h3 {
     .contact-wrapper {
       .konten-left {
         height: max-content;
-        margin: 100px 24px 0;
+        margin: 50px auto;
+
+        .image-wrapper {
+          img {
+            width: 200px;
+          }
+        }
+        .text {
+          img {
+            height: 180px;
+          }
+        }
       }
       .konten-behind {
         top: 0;
-        height: 550px;
+        height: 450px;
         align-items: end;
 
         .title {
@@ -752,7 +763,7 @@ h3 {
           }
           .cta {
             img {
-              height: 54px;
+              height: 44px;
             }
           }
         }
