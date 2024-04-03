@@ -645,7 +645,7 @@ h3 {
     .midnavbar {
       h1 {
         font-size: 30px;
-        margin-right: 32px;
+        margin: 0 32px 0 0;
       }
       .navbar-item {
         display: none;
@@ -794,7 +794,10 @@ h3 {
     .footer-wrapper {
       padding: 16px;
       /* align-items: flex-start; */
-
+      .logo {
+        align-self: flex-start;
+        margin-left: -32px;
+      }
       .footer-items {
         flex-direction: column;
         gap: 16px;
