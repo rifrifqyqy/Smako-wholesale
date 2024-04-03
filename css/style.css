@@ -68,9 +68,15 @@ nav.scrolled {
     align-items: center;
     height: 40px;
   }
-
-  .nav-wrapper .midnavbar h1 {
-    opacity: 0;
+  @media (min-width: 768px) {
+    .nav-wrapper .midnavbar h1 {
+      opacity: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .nav-wrapper .midnavbar h1 {
+      opacity: 1;
+    }
   }
 }
 nav .nav-wrapper {
@@ -79,6 +85,7 @@ nav .nav-wrapper {
   justify-content: space-between;
   margin: 0 2.625rem;
   align-items: center;
+  transition: ease-in-out 0.1s;
 
   top: 0;
   .logo {
@@ -183,9 +190,9 @@ button {
 
 .mobile-nav {
   position: fixed;
-  top: -130vh;
-  width: 100%;
+  top: -100vh;
   opacity: 0;
+  width: 100%;
   min-height: 100vh;
   display: block;
   z-index: 989;
@@ -636,7 +643,10 @@ h3 {
       display: none;
     }
     .midnavbar {
-      h1,
+      h1 {
+        font-size: 30px;
+        margin-right: 32px;
+      }
       .navbar-item {
         display: none;
       }
