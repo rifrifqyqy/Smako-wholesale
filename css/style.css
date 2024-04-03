@@ -183,8 +183,9 @@ button {
 
 .mobile-nav {
   position: fixed;
-  top: -130%;
+  top: -130vh;
   width: 100%;
+  opacity: 0;
   min-height: 100vh;
   display: block;
   z-index: 989;
@@ -225,6 +226,7 @@ button {
 }
 .mobile-nav.is-active {
   top: 0;
+  opacity: 1;
 }
 /* Hero Section */
 
