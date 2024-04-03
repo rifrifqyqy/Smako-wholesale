@@ -1,15 +1,22 @@
 document.addEventListener("scroll", () => {
   const navbar = document.querySelector("nav");
-  if (window.scrollY > 0) {
-    navbar.classList.add("scrolled");
-    $(document).ready(function () {
-      $(".midnavbar").css("transform", "translateY(-30px)");
-    });
-  } else {
-    navbar.classList.remove("scrolled");
-    $(document).ready(function () {
+
+  // Cek lebar layar
+  if (window.innerWidth > 768) {
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+      $(".midnavbar").css("transform", "translateY(-32px)");
+    } else {
+      navbar.classList.remove("scrolled");
       $(".midnavbar").css("transform", "translateY(0)");
-    });
+    }
+  } else {
+    // Jika lebar layar kurang dari atau sama dengan 768px, hanya tambahkan atau hapus class "scrolled" pada navbar
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
   }
 });
 //
@@ -22,7 +29,7 @@ links.forEach((link) => {
     const target = document.querySelector(hash);
 
     if (target) {
-      const scrollTo = window.pageYOffset;
+      const scrollTo = window.scrollY;
       const sectionMid = target.offsetTop + target.offsetHeight / 2 - window.innerHeight / 2 + scrollTo;
 
       window.scrollTo({
