@@ -183,7 +183,7 @@ button {
 
 .mobile-nav {
   position: fixed;
-  top: -100%;
+  top: -130%;
   width: 100%;
   min-height: 100vh;
   display: block;
